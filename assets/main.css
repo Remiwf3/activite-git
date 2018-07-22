@@ -1,0 +1,77 @@
+/* Définition d'une nouvelle police */
+@font-face{ 
+	font-family: 'caviardreams_regular_macroman';
+	src: url('caviarDreams-webfont.eot');
+	src: url('caviarDreams-webfont.eot?iefix') format('eot'),
+	     url('caviarDreams-webfont.woff') format('woff'),
+	     url('caviardreams-webfont.ttf') format('truetype'),
+	     url('caviardreams-webfont.svg#webfont') format('svg');
+}
+
+/* Couleur des titres de section.*/
+h2{
+    color: #FFDEAD
+}
+
+/* On centre le titre, la phrase d'accroche et on met la photo sur la droite.*/
+h1, h1+p{
+    text-align: center;
+}
+
+figure{
+    float: right;
+}
+
+
+/* On définit une bordure et une ombre sur la photo */
+img{
+    border: 1px solid #FFDEAD;
+    box-shadow: 7px 7px 5px black;
+}
+
+/* On applique la police sur tous les textes et mise en page du liseré à gauche du reste */
+body{
+    background: url('../images/fond.png');
+    font-family: "caviardreams_regular_macroman", Arial, serif;
+    display: flex;
+}
+
+.lisere{
+    width: 15%;
+    background: #FFDEAD;
+    height: 850px;
+    border: 1px solid black;
+    padding: 2%;
+    margin-right: 5%;
+}
+
+/* Mise en page du header et du contenu principal */
+main{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+.contenu{
+    display: flex;
+}
+
+.contenu article{
+    padding: 2%;
+}
+
+/* Responsive pour les écrans inférieurs à 1024 px */
+@media screen and (max-width: 1024px){
+
+
+    /* On fait disparaître le liseré */
+    .lisere{
+        display: none;
+    }
+
+    /* On met le contenu principal verticalement */
+
+    .contenu{
+        flex-direction: column;
+    }
+}
